@@ -9,6 +9,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styleSheet/style.css" />
+    <link rel="stylesheet" href="./styleSheet/authentication.css" />
 
     <!-- cdn links -->
 
@@ -32,7 +33,7 @@
             <img src="./assets/icons/logo.png" class="navbar-logo"
           /></a>
 
-          <a
+          <!-- <a
             href="#"
             class="toogle-humberger"
             id="humberger_menu"
@@ -41,7 +42,7 @@
             <span class="line1"></span>
             <span class="line2"></span>
             <span class="line3"></span>
-          </a>
+          </a> -->
 
           <div class="navbar-menu">
             <ul class="navbar-menu-list display-flex">
@@ -55,7 +56,7 @@
 
               <li class="navbar-list-catagory">
                 <select id="more">
-                  <option value="About"><a href="#">About</a></option>
+                  <option value="About">About</option>
                   <option value="Contact">Contact</option>
                 </select>
               </li>
@@ -72,7 +73,36 @@
         </nav>
       </div>
 
-      <div>ali</div>
+      <div class="user-login">
+        <h1 class="login">Register</h1>
+      </div>
+
+      <!-- body -->
+
+      <div class="login-main-wraper">
+        <!-- login content -->
+        <div class="login confirmation">請輸入傳送至XXXXXXXX 的5位數驗証碼</div>
+
+        <div class="input-fields">
+          <form onsubmit="onSubmit(event)" class="content-area">
+            <fieldset class="number-code">
+              <div>
+                <input type="number" name="code" class="code-input" required />
+                <input type="number" name="code" class="code-input" required />
+                <input type="number" name="code" class="code-input" required />
+                <input type="number" name="code" class="code-input" required />
+                <input type="number" name="code" class="code-input" required />
+                <input type="number" name="code" class="code-input" required />
+              </div>
+              <div class="limit-add">我收不到驗証碼 (50)</div>
+            </fieldset>
+
+            <button class="btn-reset">
+              <a href="./agent-page2.html"> 完成</a>
+            </button>
+          </form>
+        </div>
+      </div>
 
       <!-- Footer -->
       <div class="footer">
@@ -126,5 +156,34 @@
         }
       });
     });
+
+    const inputElements = [...document.querySelectorAll("input.code-input")];
+
+    inputElements.forEach((ele, index) => {
+      ele.addEventListener("keydown", (e) => {
+        if (e.keyCode === 8 && e.target.value === "")
+          inputElements[Math.max(0, index - 1)].focus();
+      });
+      ele.addEventListener("input", (e) => {
+        const [first, ...rest] = e.target.value;
+        e.target.value = first ?? "";
+        const lastInputBox = index === inputElements.length - 1;
+        const insertedContent = first !== undefined;
+        if (insertedContent && !lastInputBox) {
+          inputElements[index + 1].focus();
+          inputElements[index + 1].value = rest.join("");
+          inputElements[index + 1].dispatchEvent(new Event("input"));
+        }
+      });
+    });
+
+    function onSubmit(e) {
+      e.preventDefault();
+      const code = [...document.getElementsByTagName("input")]
+        .filter(({ name }) => name)
+        .map(({ value }) => value)
+        .join("");
+      console.log(code);
+    }
   </script>
 </html>

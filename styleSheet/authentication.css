@@ -1,0 +1,183 @@
+/** @format */
+@font-face {
+  font-family: microsoft;
+  src: url(./chinese.msyh.ttf);
+}
+
+.login-main-wraper {
+  padding: 70px 24px;
+  max-width: 480px;
+  margin: auto;
+}
+
+.forget .text-color {
+  color: black !important;
+}
+
+.forget a {
+  text-decoration: none;
+}
+
+.user-login {
+  background-image: url(../assets/images/login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 18px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user-login h1 {
+  font-family: microsoft;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.input-fields {
+  /* padding-top: 44px; */
+  position: relative;
+}
+
+.input-fields input {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 2px solid #e0e3eb;
+  caret-color: #ff6008;
+  font-size: 18px;
+  font-family: microsoft;
+}
+
+input:focus {
+  border-color: #ff6008;
+}
+
+.input-fields input::placeholder {
+  padding: 4px;
+  font-family: microsoft;
+  font-size: 18px;
+  line-height: 23px;
+  color: #dadada;
+}
+
+.input-fields input:not(:first-child) {
+  padding-top: 58px;
+}
+
+.input-fields button {
+  margin-top: 58px;
+  height: 48px;
+  width: 100%;
+  font-family: microsoft;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  background: #ff6008;
+  border-radius: 5px;
+}
+
+.input-fields .forget {
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-fields .forget div {
+  font-family: microsoft;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.input-fields .forget div:not(:first-child) {
+  padding-left: 84px;
+}
+
+.confirmation {
+  font-family: microsoft;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.eye-contaier {
+  position: relative;
+}
+
+.fa-eye {
+  position: absolute;
+  right: 0;
+  padding: 62px 0 15px 0;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 25px;
+  color: #dadada;
+}
+
+form fieldset {
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form .number-code input.code-input {
+  font-size: 1.5em;
+  text-align: center;
+  flex: 1 0 1em;
+}
+
+form .number-code input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #e0e3eb;
+  caret-color: #ff6008;
+  font-size: 18px;
+  font-family: microsoft;
+  max-width: 60px;
+  width: 100%;
+}
+
+form .number-code input:focus {
+  border-color: #ff6008;
+}
+
+.limit-add {
+  font-family: microsoft;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  padding-top: 28px;
+}
+
+.advertisement,
+.customers-info {
+  font-family: microsoft;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding-top: 18px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .login-main-wraper {
+    padding: 70px 18px;
+  }
+  form .number-code input {
+    max-width: 56px;
+  }
+}
