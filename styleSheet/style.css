@@ -64,8 +64,8 @@ button a {
   align-items: center;
   overflow: hidden;
   justify-content: space-between;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   max-width: 1440px;
   width: 100%;
   margin: auto;
@@ -92,49 +92,13 @@ button a {
   font-size: 18px;
 }
 
+.navbar-menu ul li a:hover,
+.navbar-list-catagory select:hover {
+  color: #dd4b39;
+}
+
 .navbar-menu-list > li:not(:first-child) {
   margin-left: 42px;
-}
-
-.navbar-toggle-menu {
-  cursor: pointer;
-  position: absolute;
-  width: 184px;
-  display: none;
-  cursor: pointer;
-  padding: 16px 0 15px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.925) !important;
-  border: 1px solid rgb(49, 49, 49);
-}
-
-.navbar-toggle-menu .navbar-list-style ul li {
-  list-style-type: none;
-  padding: 7px 0px 7px 0px;
-}
-
-.navbar-toggle-menu .navbar-list-style ul li a {
-  text-decoration: none;
-  font-family: microsoft;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  color: white;
-  display: flex;
-}
-
-.navbar-toggle-menu .navbar-list-style {
-  overflow: hidden;
-  z-index: 1;
-}
-
-.navbar-toggle-menu .navbar-list-style ul li a:hover {
-  color: #1f97e9;
-}
-
-.navbar-list-catagory:hover .navbar-toggle-menu {
-  cursor: pointer;
-  display: block;
 }
 
 .navbar-list-catagory select {
@@ -148,19 +112,13 @@ select option:focus {
   background-color: unset;
 }
 
-.navbar-menu-icon span {
-  margin-left: 6px;
-}
-.navbar-menu-icon span:hover {
-  color: #dd4b39;
-}
 .navbar-menu .navbar-arrow-down {
   padding-top: 4px;
   margin-left: 6px;
 }
 
 /* humberger */
-.toogle-humberger {
+/* .toogle-humberger {
   height: 24px;
   width: 32px;
   display: flex;
@@ -178,13 +136,147 @@ select option:focus {
   width: 30px;
   transform-origin: left;
   transition: all 2s ease;
+} */
+
+/* contact */
+.contact-section img {
+  height: 350px;
+  width: 100%;
+}
+.contact-details {
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+}
+.fa-phone-square,
+.fa-envelope,
+.fa-map-marker {
+  font-size: 18px !important;
+}
+.contact-details p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: microsoft;
+}
+
+.contact-details p span {
+  padding-left: 16px;
+}
+iframe {
+  display: block;
+  width: 90%;
+  max-width: 60rem;
+  height: 25em;
+  margin: 2rem auto;
+  border: 1px solid black;
+}
+
+pre {
+  text-align: center;
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2rem;
+  border: 1px solid #000;
+}
+
+/* about */
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+/* Accordion styles */
+
+.accordians {
+  margin: 54px 0;
+}
+
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: microsoft;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #dd4b39;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.35s;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: microsoft;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #dd4b39;
+}
+
+input:checked + .tab-label {
+  background: #1a252f;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
 }
 
 /* footer */
 .footer {
   position: relative;
   margin-top: auto;
-  background-color: #202228;
+  background-color: #2c3e50;
   padding: 34px 0 34px 0;
   width: 100%;
 }
@@ -218,7 +310,7 @@ select option:focus {
 }
 
 .footer ul li a:hover {
-  border-bottom: 1px solid #dd4b39;
+  color: #dd4b39;
 }
 
 .footer .footer-body {

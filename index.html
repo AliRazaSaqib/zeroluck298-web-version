@@ -28,7 +28,7 @@
     <section class="hold-all-sections">
       <div class="handle-nav flex-property fixed-top" id="navbar_top">
         <nav class="navbar content">
-          <a href="index.html">
+          <a href="./index.html">
             <img src="./assets/icons/logo.png" class="navbar-logo"
           /></a>
 
@@ -50,13 +50,15 @@
               </li>
 
               <li class="navbar-list-catagory">
-                <a href="#">Rent</a>
+                <a href="./contact.html">Rent</a>
               </li>
 
               <li class="navbar-list-catagory">
                 <select id="more">
                   <option value="About"><a href="#">About</a></option>
-                  <option value="Contact">Contact</option>
+                  <option value="Contact" onselect="handleContact(this)">
+                    Contact
+                  </option>
                 </select>
               </li>
 
@@ -65,7 +67,7 @@
               </li>
 
               <li class="navbar-list-catagory">
-                <a href="#">Login</a>
+                <a href="./login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -126,5 +128,9 @@
         }
       });
     });
+
+    function handleContact() {
+      console.log("code");
+    }
   </script>
 </html>

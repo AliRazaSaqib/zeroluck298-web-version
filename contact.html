@@ -9,7 +9,6 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styleSheet/style.css" />
-    <link rel="stylesheet" href="./styleSheet/authentication.css" />
 
     <!-- cdn links -->
 
@@ -29,11 +28,11 @@
     <section class="hold-all-sections">
       <div class="handle-nav flex-property fixed-top" id="navbar_top">
         <nav class="navbar content">
-          <a href="index.html">
+          <a href="./index.html">
             <img src="./assets/icons/logo.png" class="navbar-logo"
           /></a>
 
-          <!-- <a
+          <a
             href="#"
             class="toogle-humberger"
             id="humberger_menu"
@@ -42,7 +41,7 @@
             <span class="line1"></span>
             <span class="line2"></span>
             <span class="line3"></span>
-          </a> -->
+          </a>
 
           <div class="navbar-menu">
             <ul class="navbar-menu-list display-flex">
@@ -56,7 +55,7 @@
 
               <li class="navbar-list-catagory">
                 <select id="more">
-                  <option value="About">About</option>
+                  <option value="About"><a href="#">About</a></option>
                   <option value="Contact">Contact</option>
                 </select>
               </li>
@@ -73,34 +72,23 @@
         </nav>
       </div>
 
-      <div class="user-login">
-        <h1 class="login">Login</h1>
-      </div>
-
-      <!-- body -->
-
-      <div class="login-main-wraper">
-        <div class="input-fields">
-          <form>
-            <input type="text" placeholder="用戶名稱/牌照號碼" autofocus />
-            <i id="icon" class="fa fa-eye"></i>
-            <input id="password" type="password" placeholder="輸入密碼" />
-
-            <button
-              class="btn-reset"
-              onclick="window.location.href = './index.html'"
+      <div class="contact-section">
+        <img src="./assets/images/contact.jpg" />
+        <div class="contact-details content">
+          <p>
+            <i class="fa fa-map-marker"></i>
+            <span>
+              10/F., Wharf T&T Centre, Harbour City, No. 7 Canton Road,
+              Tsimshatsui, Kowloon</span
             >
-              登入
-            </button>
-          </form>
-          <div class="forget">
-            <div>
-              <a href="login.html" class="text-color"> 馬上註冊...</a>
-            </div>
-            <div>
-              <a href="" class="text-color"> 忘記密碼...</a>
-            </div>
-          </div>
+          </p>
+          <p><i class="fa fa-phone-square"></i> <span>(852) 2521 8402</span></p>
+          <p><i class="fa fa-envelope"></i> <span>info@centamail.com</span></p>
+        </div>
+        <div class="contact-information">
+          <iframe
+            src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"
+          ></iframe>
         </div>
       </div>
 
@@ -155,20 +143,6 @@
           document.getElementById("navbar_top").classList.remove("fixed-top");
         }
       });
-    });
-
-    // for login
-
-    const togglePassword = document.querySelector("#icon");
-    const password = document.querySelector("#password");
-
-    togglePassword.addEventListener("click", function (e) {
-      // toggle the type attribute
-      const type =
-        password.getAttribute("type") === "password" ? "text" : "password";
-      password.setAttribute("type", type);
-      // toggle the eye slash icon
-      this.classList.toggle("fa-eye-slash");
     });
   </script>
 </html>
