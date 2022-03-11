@@ -117,32 +117,42 @@ select option:focus {
   margin-left: 6px;
 }
 
-/* humberger */
-/* .toogle-humberger {
-  height: 24px;
-  width: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  position: absolute;
-  right: 1.5rem;
-  display: none;
+/* for body */
+.custom-pagination {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 }
 
-.toogle-humberger span {
-  height: 3px;
-  width: 30px;
-  transform-origin: left;
-  transition: all 2s ease;
-} */
+.contact-details h2 {
+  font-size: 32px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: microsoft;
+  color: black;
+  padding-top: 24px;
+}
+
+.contact-details ol {
+  padding-left: 24px;
+}
+
+.contact-details ol li {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: microsoft;
+}
+
+.contact-details ol li:not(:first-child) {
+  padding-top: 18px;
+}
+
+.contact-details ol:not(:first-child) {
+  padding-top: 14px;
+}
 
 /* for pagination */
-.item-listing .item-single {
-  padding: 35px 0;
-  border-top: 1px solid #707070;
-}
 
 .item-pagination {
   float: right;
@@ -153,7 +163,7 @@ select option:focus {
   float: left;
   width: 76px;
   height: 55px;
-  border: 1px solid #dadada;
+  border: 1px solid #f6f3f3;
   text-align: center;
   list-style: none;
 }
@@ -197,6 +207,12 @@ select option:focus {
   opacity: 0.3;
 }
 
+.fa-chevron-right,
+.fa-chevron-left {
+  font-size: 20px !important;
+  color: #dd4b39;
+}
+
 /* contact */
 .contact-section .banner-img {
   display: flex;
@@ -214,13 +230,12 @@ select option:focus {
 }
 
 .contact-details {
-  max-width: 960px;
-  width: 100%;
   margin: auto;
+  max-width: 1440px;
+  padding-bottom: 54px;
 }
-.fa-phone-square,
-.fa-envelope,
-.fa-map-marker {
+
+.fa-envelope {
   font-size: 18px !important;
 }
 .contact-details p {
@@ -235,8 +250,8 @@ select option:focus {
 }
 iframe {
   display: block;
-  width: 90%;
-  max-width: 60rem;
+  width: 100%;
+  max-width: 90rem;
   height: 25em;
   margin: 2rem auto;
   border: 1px solid black;
