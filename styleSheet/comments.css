@@ -1,0 +1,247 @@
+/** @format */
+@font-face {
+  font-family: microsoft;
+  src: url(./chinese.msyh.ttf);
+}
+.inter {
+  font-family: microsoft;
+  font-size: 14px;
+  color: #140e36;
+}
+.popins {
+  font-family: microsoft;
+}
+
+.inbox-conversation {
+  display: none;
+}
+
+.index-message {
+  padding-top: 88px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-message .message {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.index-message .no-of-messages {
+  font-size: 18px;
+  line-height: 28px;
+  color: #828282;
+}
+
+.inbox-filter {
+  margin-top: 14px;
+}
+.inbox-selection .index {
+  margin-left: 0px;
+}
+
+.conversation {
+  margin-top: 28px;
+  cursor: pointer;
+}
+
+.users-inbox {
+  padding: 14px 0;
+  border-bottom: 1px solid #eeeaea;
+}
+
+.users-inbox p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.users-inbox .hashtag {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+
+  color: #828282;
+}
+
+.users-inbox .reply-date {
+  margin-left: auto;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.users-inbox .user-comment {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.users-inbox .date {
+  font-weight: 500;
+  line-height: 24px;
+
+  color: #4f4f4f;
+}
+.comment-ares-bottomline {
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+.madara-conversaion {
+  margin-top: 0px;
+}
+.users-inbox .name-hashtag {
+  width: 180px;
+}
+
+.inbox-btns {
+  column-gap: 12px;
+}
+.inbox-btns .del {
+  background: #f2f2f2;
+  color: #140e36;
+  width: 107px;
+}
+.inbox-btns > button:hover {
+  box-shadow: 0px 0 0px 1px;
+}
+.moveback {
+  column-gap: 8px;
+}
+
+.comment-date {
+  margin-left: auto;
+}
+.user-reply {
+  width: 730px;
+}
+.comment {
+  margin-top: 18px;
+}
+.botom-line {
+  margin-top: 14px;
+}
+.scroll {
+  margin-top: 28px;
+}
+.list-end {
+  margin-top: 28px;
+  text-align: center;
+  font-weight: 400;
+
+  line-height: 24px;
+  color: #828282;
+}
+.write-comment {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.write-comment textarea {
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 14px;
+  width: 730px;
+  height: 138px;
+  padding: 20px 24px;
+  outline: 0;
+}
+.write-comment textarea:focus {
+  box-shadow: 0px 0 0px 1px;
+}
+.write-comment textarea::placeholder {
+  font-family: microsoft;
+  font-size: 12px;
+  line-height: 22px;
+  color: #828282;
+}
+.write-comment button {
+  white-space: nowrap;
+  max-width: 150px;
+  height: 42px;
+  background: #ff6008;
+  border-radius: 4px;
+  font-family: microsoft;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin-top: 24px;
+}
+
+.user-comments {
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 54px;
+}
+
+.user-comments h2 {
+  font-size: 20px;
+  font-family: microsoft;
+  font-weight: 500;
+  color: black;
+}
+@media (max-width: 1200px) {
+  .users-inbox .name-hashtag {
+    width: 170px;
+  }
+  .users-inbox .user-comment {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .users-inbox .date {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .users-inbox .comment {
+    margin-left: 0px;
+  }
+  .user-reply {
+    width: 700px;
+  }
+  .write-comment textarea {
+    width: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .conversation .users-inbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .name-comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 8px;
+    align-items: flex-start;
+  }
+  .user-reply {
+    width: 100%;
+  }
+  .write-comment textarea {
+    width: 100%;
+  }
+  .conversation .user-reply .name-comment {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 600px) {
+  .index-message {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .inbox-rep {
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mobileview {
+    padding: 0 10px;
+  }
+}
