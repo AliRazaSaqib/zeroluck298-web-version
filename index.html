@@ -44,12 +44,15 @@
               </li>
 
               <li class="navbar-list-catagory">
-                <select id="more">
-                  <option value="About">
+                <div class="more-dropdown">
+                  <button onclick="moreItems()" class="dropbtn">
+                    More <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div id="myDropdown" class="more-dropdown-content d-none">
                     <a href="./about.html">About</a>
-                  </option>
-                  <option value="Contact">Contact</option>
-                </select>
+                    <a href="./contact.html">Contact</a>
+                  </div>
+                </div>
               </li>
 
               <li class="navbar-list-catagory">
@@ -1896,6 +1899,14 @@
           elit
         </p>
       </div>
+
+      <button
+        onclick="topFunction()"
+        id="gt-back-to-top"
+        class="gt-move-to-top"
+      >
+        <i class="fa fa-arrow-up"></i>
+      </button>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -1916,6 +1927,7 @@
       const platformMenu = document.getElementById("toogleDropdown");
       const selectedPlatform = document.getElementById("selected-menu");
       const toogleDropdownMenu = document.getElementById("toogleDropdownMenu");
+      const moreDropdown = document.getElementById("myDropdown");
       const toogleDropdownSecondMenu = document.getElementById(
         "toogleDropdownSecondMenu"
       );
@@ -2028,6 +2040,10 @@
         toogleDropdownThirdMenu.classList.add("d-none");
         toogleDropdownSecondMenu.classList.add("d-none");
         toogleDropdownMenu.classList.add("d-none");
+      }
+
+      function moreItems() {
+        moreDropdown.classList.toggle("d-none");
       }
     </script>
     <script src="./js/pagination.js"></script>

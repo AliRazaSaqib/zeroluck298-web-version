@@ -54,10 +54,15 @@
               </li>
 
               <li class="navbar-list-catagory">
-                <select id="more">
-                  <option value="About"><a href="#">About</a></option>
-                  <option value="Contact">Contact</option>
-                </select>
+                <div class="more-dropdown">
+                  <button onclick="moreItems()" class="dropbtn">
+                    More <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div id="myDropdown" class="more-dropdown-content d-none">
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                  </div>
+                </div>
               </li>
 
               <li class="navbar-list-catagory">
