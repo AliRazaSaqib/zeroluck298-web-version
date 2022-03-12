@@ -36,11 +36,11 @@
           <div class="navbar-menu">
             <ul class="navbar-menu-list display-flex">
               <li class="navbar-list-catagory">
-                <a href="#">Buy</a>
+                <a href="./index.html">Buy</a>
               </li>
 
               <li class="navbar-list-catagory">
-                <a href="#">Rent</a>
+                <a href="./rent.html">Rent</a>
               </li>
 
               <li class="navbar-list-catagory">
@@ -155,6 +155,7 @@
     });
 
     const inputElements = [...document.querySelectorAll("input.code-input")];
+    const moreDropdown = document.getElementById("myDropdown");
 
     inputElements.forEach((ele, index) => {
       ele.addEventListener("keydown", (e) => {
@@ -182,5 +183,9 @@
         .join("");
       console.log(code);
     }
+
+    function moreItems() {
+        moreDropdown.classList.toggle("d-none");
+      }
   </script>
 </html>

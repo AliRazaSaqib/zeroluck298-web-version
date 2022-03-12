@@ -1927,6 +1927,7 @@
       const platformMenu = document.getElementById("toogleDropdown");
       const selectedPlatform = document.getElementById("selected-menu");
       const toogleDropdownMenu = document.getElementById("toogleDropdownMenu");
+      const moreDropdown = document.getElementById("myDropdown");
       const toogleDropdownSecondMenu = document.getElementById(
         "toogleDropdownSecondMenu"
       );
@@ -2039,6 +2040,10 @@
         toogleDropdownThirdMenu.classList.add("d-none");
         toogleDropdownSecondMenu.classList.add("d-none");
         toogleDropdownMenu.classList.add("d-none");
+      }
+
+      function moreItems() {
+        moreDropdown.classList.toggle("d-none");
       }
     </script>
     <script src="./js/pagination.js"></script>
